@@ -14,7 +14,7 @@ export const CustomMap = ({ control }) => {
 
   useEffect(() => {
     // Agrega el event listener al mapa para detectar clics
-    map.on("click", handleMapClick);
+    map.on("dblclick", handleMapClick);
 
     // Limpia el event listener cuando el componente se desmonte
     return () => {

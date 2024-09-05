@@ -3,6 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { setStartLocation } from "../store/route.slice";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import icon from "leaflet/dist/images/marker-icon.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import { MapComponent } from "./MapComponent";
 import { LeafletRouting } from "./LeafletRuting";
 import { Markers } from "./Markers";
@@ -22,6 +25,7 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
+
 
 
 
@@ -66,7 +70,16 @@ export const RoutePlanner = () => {
     } else {
       console.error("Geolocalización no disponible");
     }
+
+    let DefaultIcon = L.icon({
+      iconUrl: icon,
+      shadowUrl: iconShadow,
+    });
+
+    L.Marker.prototype.options.icon = DefaultIcon;
   }, [dispatch]);
+
+
 
   return (
     <>

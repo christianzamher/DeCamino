@@ -7,7 +7,7 @@ export const MapComponent = ({ center }) => {
   const [position, setPosition] = useState(null);
 
   const map = useMapEvents({
-    dblclick() {
+    click() {
       map.locate();
     },
     locationfound(e) {
@@ -16,9 +16,14 @@ export const MapComponent = ({ center }) => {
     },
   });
 
+  //Muestra las coordenadas en el popup
+  const formatLatLng = (latlng) => {
+    return `${latlng.lat.toFixed(4)}, ${latlng.lng.toFixed(4)}`;
+  };
+
   return position === null ? null : (
     <Marker position={position}>
-      <Popup>You are here</Popup>
+      <Popup>Estas Aqui: {formatLatLng(position)}</Popup>
     </Marker>
   );
 };
