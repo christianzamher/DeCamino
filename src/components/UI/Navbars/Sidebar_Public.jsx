@@ -26,8 +26,8 @@ export const Sidebar_Public = ({closeMenu}) => {
     },
     {
       name: "Mi ruta",
-      href: "/Route",
-      isActive: (active == "/Route")
+      href: "/Routes",
+      isActive: (active == "/Routes")
     },
     {
       name: "Iniciar sesión",
