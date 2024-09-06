@@ -25,7 +25,7 @@ export const Markers = () => {
 
   // create custom icon
   const customIcon = new Icon({
-    iconUrl: "argentina2.png",
+    iconUrl: "argentina 3.png",
 
     iconSize: [38, 38], // size of the icon
   });
