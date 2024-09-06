@@ -37,9 +37,9 @@ export const Sidebar_Public = ({closeMenu}) => {
   ];
 
   return (
-    <div className="flex flex-col justify-between bg-white rounded-b-2xl">
+    <div className="flex flex-col justify-between bg-white rounded-b-2xl ">
       <div className="px-2 pt-2">
-        <ul className="mt-6 space-y-1">
+        <ul className="mt-6 space-y-1 z-[9000]">
           {menuItems.map((item) => (
             <li key={item.name} className={`flex items-center p-2 text-base font-bold ${ item.isActive ? "text-greenT" : "text-gray-900"} border-t-1 border-woodLogo`}>
               <span className="ml-3">

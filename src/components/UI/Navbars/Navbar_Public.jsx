@@ -59,7 +59,7 @@ export const Navbar_Public = () => {
   return (
     <Navbar
       position="static"
-      className="w-full bg-[#0a1200]/90 text-white z-[9000]"
+      className="w-full bg-[#0a1200]/90 text-white z-[8000]"
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
       classNames={{
@@ -116,7 +116,7 @@ export const Navbar_Public = () => {
       </NavbarContent>
 
       {/* MENU HAMBURGUESA */}
-      <NavbarMenu>
+      <NavbarMenu className="z-[9000]">
         <Sidebar_Public closeMenu={setIsMenuOpen} />
       </NavbarMenu>
       
