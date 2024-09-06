@@ -25,7 +25,7 @@ export const Markers = () => {
 
   // create custom icon
   const customIcon = new Icon({
-    iconUrl: "https://cdn-icons-png.flaticon.com/512/447/447031.png",
+    iconUrl: "argentina2.png",
 
     iconSize: [38, 38], // size of the icon
   });
